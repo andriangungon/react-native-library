@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "paths": {
+      "app/*": ["src/app/*"],
+      "assets/*": ["assets"],
+      "components/*": ["src/components/*"],
+      "constants/*": ["src/constants/*"],
+      "customers/*": ["src/features/customers/*"],
+      "features/*": ["src/features/*"],
+      "members/*": ["src/features/members/*"],
+      "randomizer/*": ["src/features/randomizer/*"],
+      "lib/*": ["src/lib/*"],
+      "screens/*": ["src/screens/*"],
+      "themes/*": ["src/themes/*"],
+    }
+  }
+}
