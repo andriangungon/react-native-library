@@ -6,6 +6,7 @@ const variables = {
 
 const styles = StyleSheet.create({
   view: {
+    backgroundColor: 'white',
     flex: 1,
     padding: variables.mediumPadding,
   }

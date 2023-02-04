@@ -5,14 +5,40 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // tab
 import AppTab from './tabs/AppTab';
 
+// screens
+import AnimationScreen from 'screens/AnimationScreen';
+import BasicAnimationScreen from 'screens/animation/BasicAnimationScreen';
+
 // types
 import { RootStackParamList } from './types';
 
 const DEFAULT_CONFIG = {
   headerShown: false,
 };
+const FIREBASE_CONFIG = {
+  headerShown: true,
+};
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
+
+const AnimationGroup = (
+  <Stack.Group screenOptions={FIREBASE_CONFIG}>
+    <Stack.Screen
+      component={BasicAnimationScreen}
+      name='BasicAnimation'
+      options={{ title: 'Basic Animation' }}
+    />
+  </Stack.Group>
+);
+
+const FirebaseGroup = (
+  <Stack.Group screenOptions={FIREBASE_CONFIG}>
+    <Stack.Screen
+      component={AnimationScreen}
+      name='Animation'
+    />
+  </Stack.Group>
+);
 
 const AppContainer: FC = () => {
   return (
@@ -24,6 +50,8 @@ const AppContainer: FC = () => {
             name='App'
           />
         </Stack.Group>
+        {AnimationGroup}
+        {FirebaseGroup}
       </Stack.Navigator>
     </NavigationContainer>
   );

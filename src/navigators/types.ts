@@ -1,5 +1,4 @@
 import {
-  CompositeScreenProps,
   NavigatorScreenParams,
 } from '@react-navigation/native';
 
@@ -9,5 +8,9 @@ export type AppTabParamList = {
 }
 
 export type RootStackParamList = {
+  Animation: undefined;
   App: NavigatorScreenParams<AppTabParamList>;
+  BasicAnimation: undefined;
+  FirebaseFetchData: undefined;
+  GestureAnimation: undefined;
 }
