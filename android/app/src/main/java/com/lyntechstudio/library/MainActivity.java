@@ -1,4 +1,4 @@
-package com.library;
+package com.lyntechstudio.library;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;

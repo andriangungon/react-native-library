@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "480008033978",
+    "project_id": "heineken-87d6c",
+    "storage_bucket": "heineken-87d6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480008033978:android:1eb471988cfdbb39aed483",
+        "android_client_info": {
+          "package_name": "com.lyntechstudio.library"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480008033978-cqnkbu069anu4adm1fo4a12qcmskqj1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAFI7ZUJaCNLrxf2yv5kACizBRM2h1LQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480008033978-cqnkbu069anu4adm1fo4a12qcmskqj1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480008033978:android:06337a6629e428d6aed483",
+        "android_client_info": {
+          "package_name": "com.lyntechstudio.library"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480008033978-d3mcbbvsl34s2t4ue4fesevhpf25jsi5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lyntechstudio.library",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "480008033978-cqnkbu069anu4adm1fo4a12qcmskqj1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAFI7ZUJaCNLrxf2yv5kACizBRM2h1LQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480008033978-cqnkbu069anu4adm1fo4a12qcmskqj1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
