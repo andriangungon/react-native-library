@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
-import { View } from 'react-native';
 
+// custom components
 import ListItem from 'components/list_item/ListItem';
-
-import s from 'themes/styles';
+import { MainContainer } from 'components/containers';
 
 // types
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -13,15 +12,15 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Animation'>;
 
 const LibraryScreen: FC<Props> = ({ navigation }) => {
 
-  const handleOnPress = () => navigation.navigate('Animation')
+  const handleOnAnimationPress = () => navigation.navigate('Animation');
 
   return (
-    <View style={s.view}>
+    <MainContainer>
       <ListItem
-        onPress={handleOnPress}
+        onPress={handleOnAnimationPress}
         title='Animation'
       />
-    </View>
+    </MainContainer>
   );
 };
 

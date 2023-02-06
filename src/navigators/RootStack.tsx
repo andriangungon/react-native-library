@@ -7,7 +7,13 @@ import AppTab from './tabs/AppTab';
 
 // screens
 import AnimationScreen from 'screens/AnimationScreen';
+import AuthScreen from 'screens/AuthScreen';
 import BasicAnimationScreen from 'screens/animation/BasicAnimationScreen';
+import FirebaseScreen from 'screens/FirebaseScreen';
+
+// redux
+import { useAppSelector } from 'app/store';
+import { authStatusSelector } from 'features/auth/authSlice';
 
 // types
 import { RootStackParamList } from './types';
@@ -15,14 +21,15 @@ import { RootStackParamList } from './types';
 const DEFAULT_CONFIG = {
   headerShown: false,
 };
-const FIREBASE_CONFIG = {
-  headerShown: true,
-};
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AnimationGroup = (
-  <Stack.Group screenOptions={FIREBASE_CONFIG}>
+  <Stack.Group screenOptions={{ headerShown: true }}>
+    <Stack.Screen
+      component={AnimationScreen}
+      name='Animation'
+    />
     <Stack.Screen
       component={BasicAnimationScreen}
       name='BasicAnimation'
@@ -31,27 +38,37 @@ const AnimationGroup = (
   </Stack.Group>
 );
 
-const FirebaseGroup = (
-  <Stack.Group screenOptions={FIREBASE_CONFIG}>
+const AuthGroup = (
+  <Stack.Group>
     <Stack.Screen
-      component={AnimationScreen}
-      name='Animation'
+      component={FirebaseScreen}
+      name='Firebase'
+      options={{
+        headerShown: false
+      }}
+    />
+    <Stack.Screen
+      component={AuthScreen}
+      name='Auth'
     />
   </Stack.Group>
 );
 
 const AppContainer: FC = () => {
+  const isLoggedIn = useAppSelector(authStatusSelector);
+
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={DEFAULT_CONFIG}>
-        <Stack.Group>
+      <Stack.Navigator>
+        {isLoggedIn ? (
+          <Stack.Group screenOptions={DEFAULT_CONFIG}>
           <Stack.Screen
             component={AppTab}
             name='App'
           />
+          {AnimationGroup}
         </Stack.Group>
-        {AnimationGroup}
-        {FirebaseGroup}
+        ) : AuthGroup }
       </Stack.Navigator>
     </NavigationContainer>
   );

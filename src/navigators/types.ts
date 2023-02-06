@@ -10,7 +10,10 @@ export type AppTabParamList = {
 export type RootStackParamList = {
   Animation: undefined;
   App: NavigatorScreenParams<AppTabParamList>;
+  Auth: { type: string };
   BasicAnimation: undefined;
-  FirebaseFetchData: undefined;
-  GestureAnimation: undefined;
+  Firebase: undefined;
+  Login: undefined;
+  Register: undefined;
+  Settings: undefined;
 }
