@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 
 // custom components
-import Animation from 'features/animation/Animation';
 import { MainContainer } from 'components/containers';
+import ToDoList from 'features/toDoList/ToDoList';
 
-const AnimationScreen: FC = () => {
+const ToDoListScreen: FC = () => {
   return (
     <MainContainer>
-      <Animation />
+      <ToDoList />
     </MainContainer>
   );
 };
 
-export default AnimationScreen;
+export default ToDoListScreen;

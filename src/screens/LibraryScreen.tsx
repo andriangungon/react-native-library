@@ -12,13 +12,18 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Animation'>;
 
 const LibraryScreen: FC<Props> = ({ navigation }) => {
 
-  const handleOnAnimationPress = () => navigation.navigate('Animation');
+  const handleOnAnimationPress = () => navigation.navigate( 'Animation');
+  const handleOnToDoListPress = () => navigation.navigate( 'ToDoList');
 
   return (
     <MainContainer>
       <ListItem
         onPress={handleOnAnimationPress}
         title='Animation'
+      />
+      <ListItem
+        onPress={handleOnToDoListPress}
+        title='To-Do List (Firebase)'
       />
     </MainContainer>
   );

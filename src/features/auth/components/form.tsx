@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import { Field } from 'formik';
 
 // Custom Components
-import CustomInput from '../../../components/common/custom_input';
+import CustomInput from 'components/common/custom_input';
 import Button from 'components/common/button/button';
 
 interface Props {

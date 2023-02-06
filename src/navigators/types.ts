@@ -16,4 +16,5 @@ export type RootStackParamList = {
   Login: undefined;
   Register: undefined;
   Settings: undefined;
+  ToDoList: undefined;
 }

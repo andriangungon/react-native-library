@@ -1,10 +1,10 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { RootState } from 'app/rootReducer';
 
 import auth from '@react-native-firebase/auth';
 
 // Types
-import { AuthState, AuthFields, User } from './types';
+import { AuthState, AuthFields } from './types';
 
 const initialState: AuthState = {
   error: null,

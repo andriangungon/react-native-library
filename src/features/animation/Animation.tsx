@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+// custom components
 import ListItem from 'components/list_item/ListItem';
 
 // types
@@ -13,12 +13,10 @@ const Animation: FC = () => {
   const handleOnPress = () => navigation.navigate('BasicAnimation');
 
   return (
-    <View>
-      <ListItem
-          onPress={handleOnPress}
-          title='Basic Animation - Scale and Opacity'
-        />
-    </View>
+    <ListItem
+        onPress={handleOnPress}
+        title='Basic Animation - Scale and Opacity'
+      />
   );
 };
 

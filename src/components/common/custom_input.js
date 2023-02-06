@@ -52,7 +52,6 @@ const CustomInput = (props) => {
             onPress={onPress}
             size={ICON_SIZE}
             style={s.searchBarCloseButton}
-            testID='button-clear'
           />
         </View>
       ) : renderInput()}

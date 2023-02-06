@@ -10,6 +10,7 @@ import AnimationScreen from 'screens/AnimationScreen';
 import AuthScreen from 'screens/AuthScreen';
 import BasicAnimationScreen from 'screens/animation/BasicAnimationScreen';
 import FirebaseScreen from 'screens/FirebaseScreen';
+import ToDoListScreen from 'screens/ToDoListScreen';
 
 // redux
 import { useAppSelector } from 'app/store';
@@ -54,6 +55,18 @@ const AuthGroup = (
   </Stack.Group>
 );
 
+const ToDoListGroup = (
+  <Stack.Group screenOptions={{ headerShown: true }}>
+    <Stack.Screen
+      component={ToDoListScreen}
+      name='ToDoList'
+      options={{
+        title: 'To-Do List'
+      }}
+    />
+  </Stack.Group>
+);
+
 const AppContainer: FC = () => {
   const isLoggedIn = useAppSelector(authStatusSelector);
 
@@ -67,6 +80,7 @@ const AppContainer: FC = () => {
             name='App'
           />
           {AnimationGroup}
+          {ToDoListGroup}
         </Stack.Group>
         ) : AuthGroup }
       </Stack.Navigator>
